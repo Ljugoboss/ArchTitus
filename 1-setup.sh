@@ -186,6 +186,7 @@ PKGS=(
 'unzip'
 'usbutils'
 'vim'
+'neovim'
 'virt-manager'
 'virt-viewer'
 'wget'

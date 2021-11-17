@@ -22,6 +22,16 @@ git clone "https://github.com/ChrisTitusTech/zsh"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $HOME/powerlevel10k
 ln -s "$HOME/zsh/.zshrc" $HOME/.zshrc
 
+#
+# Install oh-my-zsh
+#
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+#
+# Install nvm
+#
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
 PKGS=(
 'autojump'
 'awesome-terminal-fonts'
@@ -49,6 +59,11 @@ PKGS=(
 'ttf-roboto'
 'zoom' # video conferences
 'snap-pac'
+'discord'
+'slack-desktop'
+'1password'
+'vscode'
+'steam'
 )
 
 for PKG in "${PKGS[@]}"; do
@@ -57,6 +72,7 @@ done
 
 export PATH=$PATH:~/.local/bin
 cp -r $HOME/ArchTitus/dotfiles/* $HOME/.config/
+cp $HOME/.zshrc_original $HOME/.zshrc
 pip install konsave
 konsave -i $HOME/ArchTitus/kde.knsv
 sleep 1
