@@ -208,6 +208,14 @@ for PKG in "${PKGS[@]}"; do
     sudo pacman -S "$PKG" --noconfirm --needed
 done
 
+
+#
+# setup nvim
+#
+pacman -S --noconfirm python-pynvim
+npm i -g neovim
+pip3 install --upgrade pynvim
+
 #
 # determine processor type and install microcode
 # 
