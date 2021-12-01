@@ -180,6 +180,7 @@ PKGS=(
 'synergy'
 'systemsettings'
 'terminus-font'
+'the_silver_searcher'
 'traceroute'
 'ufw'
 'unrar'
